@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="row justify-content-center mt-4">
+    {% for blog in blogs %}
+    <article class="col-lg-6 mb-3">
+        <div class="card">
+            <div class="card-header bg-secondary text-white d-flex justify-content-between">
+                <h4>{{ blog.title|title }}</h4>
+                <div>
+                     {% if g.user.id == blog.blog_id %}
+                        <a class="btn btn-outline-light" href="{{ url_for('blog.update', id=blog.id) }}"><i class="bi bi-pencil-square"></i>
+                            Editar</a>
+                      {% endif %}
+                </div>
+            </div>
+            <div class="card-body">
+                <blockquote  class="blockquote mb-0">
+                    {{ blog.body }}
+                    <footer  class="blockquote-footer my-1"> por {{ blog.user.username|capitalize }}</footer>
+                </blockquote>
+            </div>
+            <div class="card-footer d-flex pb-0">
+                <i class="bi bi-calendar3 me-2"></i>
+                <p>publicado em: {{ blog.created_date.strftime('%d/%m/%Y') }}
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+@import url("_reset.css");
+
+body{
+     background-color: #FDFDFD;
+     font-family: 'Times New Roman', sans-serif;
+}
+.container{
+    margin: 0 50px;
+}
+
+.secao{
+    width:50vw;
+    margin: 0 auto;
+    background-color: #ddf1f4;
+    padding: 1rem;
+    border-radius:10px;
+    shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+    box-sizing: border-box;
+}
+
+.titulo-secao{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #030303;
+    padding-bottom: 1rem;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+.campo-formulario{
+    border: none;
+    align-self: flex-start;
+    margin-bottom: 0.8rem;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+
+}
+.campo-input:focus{
+    outline:none;
+}
+.campo-label{
+    font-size: 1rem;
+    padding-bottom: rem;
+
+}
+.campo-input{
+    border: none;
+    width:100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    background:  transparent;
+    border:  1px solid  #003030;
+    border-radius: 5px;
+}
+.botao{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+     border: none;
+     border-radius: 6px;
+     width: 40%;
+     height: 2rem;
+     cursor: pointer;
+}

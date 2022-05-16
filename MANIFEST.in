@@ -1,0 +1,4 @@
+graft blog/static
+graft blog/templates
+graft blog/validators
+global-exclude *.pyc
